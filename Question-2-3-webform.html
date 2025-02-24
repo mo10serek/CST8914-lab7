@@ -33,25 +33,25 @@
       <input type="text" name="fullname" id="fullname" required aria-required="true" aria-labelledby="fullname" /> <!-- added aria-required and aria-labelledby so that inputing the name is manitory and link to the label above-->
     </div>
     <div class="biography">
-      <label id="expLabel" for="biography">Biography</label> <!-- added id -->
-      <textarea type="text" name="biography" id="biography" aria-labelledby="expLabel" aria-describedby="expDesc"></textarea> <!-- added aria-labelledby and aria-describedby to link the lable and decription-->
-      <span id="expDesc"> Include examples on your skills in JavaScript.</span> <!-- added id -->
+      <label id="bioLabel" for="biography">Biography</label> <!-- added id -->
+      <textarea type="text" name="biography" id="biography" aria-labelledby="bioLabel" aria-describedby="bioDesc"></textarea> <!-- added aria-labelledby and aria-describedby to link the lable and decription-->
+      <span id="bioDesc"> Include examples on your skills in JavaScript.</span> <!-- added id -->
     </div>
     <fieldset> <!-- group the radio buttons together -->
       <legend>Gender</legend>
         <div class="male">
-          <input id="gender_male" name="gender" type="radio" value="male" />
-          <label for="gender_male">Male</label>
+          <input id="gender_male" name="gender" type="radio" value="male" aria-labelledby="maleLabel" /> <!-- added aria-labelledby to reference the label next to the tag -->
+          <label id="maleLabel" for="gender_male">Male</label>
         </div>
         <div class="female">
-          <input id="gender_female" name="gender" type="radio" value="female" />
-          <label for="gender_female">Female</label>
+          <input id="gender_female" name="gender" type="radio" value="female" aria-labelledby="femaleLabel"/> <!-- added aria-labelledby to reference the label next to the tag -->
+          <label id="femaleLabel" for="gender_female">Female</label>
         </div>
       </div>  
     </fieldset>
     <div class="accept_agbs">
-      <input type="checkbox" name="accept_agbs" id="accept_agbs" value="1" />
-      <label for="accept_agbs">I accept the terms and conditions</label>
+      <input type="checkbox" name="accept_agbs" id="accept_agbs" value="1" aria-labelledby="acceptLabel" /> <!-- added aria-labelledby to reference the label next to the tag -->
+      <label id="acceptLabel" for="accept_agbs">I accept the terms and conditions</label>
     </div>
     <div class="control">
       <input name="validate" type="hidden" value="1" />
