@@ -29,13 +29,13 @@
       <h1>Feedback form</h1>
   <form>
     <div class="fullname">
-      <label for="fullname">Full name <span class="required">*</span></label>
-      <input type="text" name="fullname" id="fullname" required aria-required="true" />
+      <label for="fullname">Full name (First name Last name)<span class="required">*</span></label> <!-- added instruction in the label -->
+      <input type="text" name="fullname" id="fullname" required aria-required="true" aria-labelledby="fullname" /> <!-- added aria-required and aria-labelledby so that inputing the name is manitory and link to the label above-->
     </div>
     <div class="biography">
-      <label for="biography">Biography</label>
-      <textarea type="text" name="biography" id="biography"></textarea>
-      <span>Include examples on your skills in JavaScript.</span>
+      <label id="expLabel" for="biography">Biography</label> <!-- added id -->
+      <textarea type="text" name="biography" id="biography" aria-labelledby="expLabel" aria-describedby="expDesc"></textarea> <!-- added aria-labelledby and aria-describedby to link the lable and decription-->
+      <span id="expDesc"> Include examples on your skills in JavaScript.</span> <!-- added id -->
     </div>
     <fieldset> <!-- group the radio buttons together -->
       <legend>Gender</legend>
