@@ -30,7 +30,7 @@
   <form>
     <div class="name">
       <label for="name">Full name (First name Last name)<span class="required">*</span></label> <!-- added instruction in the label -->
-      <input type="text" name="name" id="name"] aria-required="true" aria-labelledby="name"/> <!-- added aria-required and aria-labelledby so that inputing the name is manitory and link to the label above-->
+      <input type="text" name="name" id="name" aria-required="true" aria-labelledby="name"/> <!-- added aria-required and aria-labelledby so that inputing the name is manitory and link to the label above-->
     </div>
     <div class="biography">
       <label id="bioLabel" for="biography">Biography</label> <!-- added id -->
@@ -63,6 +63,8 @@
   <script>"use strict"; <!-- remove an unessary ;-->
       (function () {
         var validateInput;
+
+        var numberOfErrors = 0;
       
         $.urlParam = function (name) {
           var results;
@@ -96,7 +98,7 @@
               $elementToDescribe = $input;
               $referencedElement = $input;
             }
-            $error = $('<a href=${input}>' + message + '</a>'); // put the link of the input to go to the place that cause the error
+            $error = $('<a href=${input} class="error"> ' + message + '</a>'); // put the link of the input to go to the place that cause the error and a class called error to count the number of errors
             $error.click(function (e) {
               // If we rely on the link's href pointing to the input's ID, it doesn't trigger forms mode in screen readers
               $referencedElement.focus();
@@ -128,8 +130,6 @@
             validateInput('biography', 'Please tell us something about your history!');
             validateInput('gender', 'Please tell us your gender!');
             validateInput('accept_agbs', 'You must accept our terms and conditions!');
-
-            console.log($('.error').length)
       
             if ($('.error').length === 0) {
               return alert('All inputs are valid.');
