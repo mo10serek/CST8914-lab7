@@ -25,7 +25,7 @@ a {
   color: #006b3a;
 }
 
-a :focus{ /*-- added a pseudo class on the a tags in order to highlight  the links */
+:focus { /*-- added a pseudo class on the a tags in order to highlight  the links */
   outline: 2px solid #000000;
 }
 
@@ -288,8 +288,9 @@ article p {
   <!-- move the div newsletter class to the footer so that the focus won't skip the main tag -->>
   <footer class="newsletter">
     <h3>Like the Funion? Consider joining our newsletter!</h3>
-      <input type="text">
-      <button type="button" onfocus="getFocus()">Sign up</button></div>
+    <label for="email">Email: </label>
+    <input id="email" type="email" name="email" />
+    <button type="button" onfocus="getFocus()">Sign up</button> <!-- remove the div element -->
   </footer>
   
   <script>
