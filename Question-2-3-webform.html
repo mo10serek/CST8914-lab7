@@ -36,14 +36,19 @@
       <label>Biography</label>
       <textarea id="biography" name="biography" type="text"></textarea>
       <span>Include examples on your skills in JavaScript.</span>
-    </div>    
-    <div>Gender</div>
-    <div class="gender">
-      <input id="gender_male" name="gender" type="radio" value="male" />
-      <label>Male</label>
-      <input id="gender_female" name="gender" type="radio" value="female" />
-      <label>Female</label>
-    </div>  
+    </div>
+    <fieldset> <!-- group the radio buttons together -->
+      <legend>Gender</legend>
+        <div class="male">
+          <input id="gender_male" name="gender" type="radio" value="male" />
+          <label for="gender_male">Male</label>
+        </div>
+        <div class="female">
+          <input id="gender_female" name="gender" type="radio" value="female" />
+          <label for="gender_female">Female</label>
+        </div>
+      </div>  
+    </fieldset>
     <div class="control">
       <input id="accept_agbs" name="accept_agbs" type="checkbox" value="1" />
       <label>I accept the terms and conditions</label>
@@ -54,8 +59,8 @@
     </div>
   </form>
       
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>"use strict"; <!-- remove an unessary ;-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>"use strict"; <!-- remove an unessary ;-->
       (function () {
         var validateInput;
       
@@ -131,6 +136,6 @@
           }
         });
       }).call(void 0); // fix the end tag indext
-    </script>            
+  </script>            
   </body>
 </html>
