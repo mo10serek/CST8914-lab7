@@ -38,24 +38,27 @@
       <span id="bioDesc"> Include examples on your skills in JavaScript.</span> <!-- added id -->
     </div>
     <fieldset> <!-- group the radio buttons together -->
-      <legend>Gender</legend> <!-- change div to legend-->
-        <div class="male"> <!-- change the class to male -->
-          <input id="gender_male" name="gender" type="radio" value="male" aria-labelledby="maleLabel" /> <!-- added aria-labelledby to reference the label next to the tag -->
-          <label id="maleLabel" for="gender_male">Male</label> <!-- added a label next to the male radio and put a id and form with it -->
-        </div>
-        <div class="female"> <!-- change the class to female -->
-          <input id="gender_female" name="gender" type="radio" value="female" aria-labelledby="femaleLabel"/> <!-- added aria-labelledby to reference the label next to the tag -->
-          <label id="femaleLabel" for="gender_female">Female</label> <!-- added a label next to the female radio and put a id and form with it -->
-        </div>
-      </div>  
+    <legend>Gender</legend> <!-- change div to legend-->
+      <div class="male"> <!-- change the class to male -->
+        <input id="gender_male" name="gender" type="radio" value="male" aria-labelledby="maleLabel" /> <!-- added aria-labelledby to reference the label next to the tag -->
+        <label id="maleLabel" for="gender_male">Male</label> <!-- added a label next to the male radio and put a id and form with it -->
+      </div>
+      <div class="female"> <!-- change the class to female -->
+        <input id="gender_female" name="gender" type="radio" value="female" aria-labelledby="femaleLabel"/> <!-- added aria-labelledby to reference the label next to the tag -->
+        <label id="femaleLabel" for="gender_female">Female</label> <!-- added a label next to the female radio and put a id and form with it -->
+      </div>
+    </div>  
     </fieldset>
-    <div class="accept_agbs"> <!-- change class name to accept agbs -->
-      <input type="checkbox" name="accept_agbs" id="accept_agbs" value="1" aria-labelledby="acceptLabel" /> <!-- added aria-labelledby to reference the label next to the tag -->
-      <label id="acceptLabel" for="accept_agbs">I accept the terms and conditions</label>
-    </div>
-    <div class="submit">
-      <input name="validate" type="hidden" value="1" />
-      <input type="submit" value="Register" />
+    <fieldset> <!-- group the checkbox and add a legend (terms accepted)-->
+    <legend>terms accepted</legend>
+      <div class="accept_agbs"> <!-- change class name to accept agbs -->
+        <input type="checkbox" name="accept_agbs" id="accept_agbs" value="1" aria-labelledby="acceptLabel" /> <!-- added aria-labelledby to reference the label next to the tag -->
+        <label id="acceptLabel" for="accept_agbs">I accept the terms and conditions</label>
+      </div>
+    </fieldset>
+    <div class="submit"> <!-- change class name to submit-->
+      <!--<input name="validate" type="hidden" value="1" /> -->
+      <input type="submit" name="validate" id="validate" value="Register"/> <!-- change the button to one and correct it-->
     </div>
   </form>
       
