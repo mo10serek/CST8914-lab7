@@ -130,9 +130,7 @@
             validateInput('biography', 'Please tell us something about your history!');
             validateInput('gender', 'Please tell us your gender!');
             validateInput('accept_agbs', 'You must accept our terms and conditions!');
-      
-            document.getElementsByClassName("errors") // add this statement to focus on the errors group
-
+            
             if ($('.error').length === 0) {
               return alert('All inputs are valid.');
             }
