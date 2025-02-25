@@ -57,7 +57,6 @@
       </div>
     </fieldset>
     <div class="submit"> <!-- change class name to submit-->
-      <!--<input name="validate" type="hidden" value="1" /> -->
       <input type="submit" name="validate" id="validate" value="Register"/> <!-- change the button to one and correct it-->
     </div>
   </form>
@@ -132,6 +131,8 @@
             validateInput('gender', 'Please tell us your gender!');
             validateInput('accept_agbs', 'You must accept our terms and conditions!');
       
+            document.getElementsByClassName("errors") // add this statement to focus on the errors group
+
             if ($('.error').length === 0) {
               return alert('All inputs are valid.');
             }
