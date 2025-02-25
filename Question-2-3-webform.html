@@ -28,32 +28,32 @@
   <body> <!-- fix the indexting of the body paragrath-->
       <h1>Feedback form</h1>
   <form>
-    <div class="name">
-      <label for="name">Full name (First name Last name)<span class="required">*</span></label> <!-- added instruction in the label -->
+    <div class="name"> <!-- change class name to name -->
+      <label for="name">Full name (First name Last name)<span class="required">*</span></label> <!-- added instruction in the label and form -->
       <input type="text" name="name" id="name" aria-required="true" aria-labelledby="name"/> <!-- added aria-required and aria-labelledby so that inputing the name is manitory and link to the label above-->
     </div>
-    <div class="biography">
-      <label id="bioLabel" for="biography">Biography</label> <!-- added id -->
-      <textarea type="text" name="biography" id="biography" aria-labelledby="bioLabel" aria-describedby="bioDesc"></textarea> <!-- added aria-labelledby and aria-describedby to link the lable and decription-->
+    <div class="biography"> <!-- change class name to biography -->
+      <label id="bioLabel" for="biography">Biography</label> <!-- added id and form -->
+      <textarea type="text" name="biography" id="biography" aria-labelledby="bioLabel" aria-describedby="bioDesc"></textarea> <!-- added aria-labelledby and aria-describedby to link the label and decription-->
       <span id="bioDesc"> Include examples on your skills in JavaScript.</span> <!-- added id -->
     </div>
     <fieldset> <!-- group the radio buttons together -->
-      <legend>Gender</legend>
-        <div class="male">
+      <legend>Gender</legend> <!-- change div to legend-->
+        <div class="male"> <!-- change the class to male -->
           <input id="gender_male" name="gender" type="radio" value="male" aria-labelledby="maleLabel" /> <!-- added aria-labelledby to reference the label next to the tag -->
-          <label id="maleLabel" for="gender_male">Male</label>
+          <label id="maleLabel" for="gender_male">Male</label> <!-- added a label next to the male radio and put a id and form with it -->
         </div>
-        <div class="female">
+        <div class="female"> <!-- change the class to female -->
           <input id="gender_female" name="gender" type="radio" value="female" aria-labelledby="femaleLabel"/> <!-- added aria-labelledby to reference the label next to the tag -->
-          <label id="femaleLabel" for="gender_female">Female</label>
+          <label id="femaleLabel" for="gender_female">Female</label> <!-- added a label next to the female radio and put a id and form with it -->
         </div>
       </div>  
     </fieldset>
-    <div class="accept_agbs">
+    <div class="accept_agbs"> <!-- change class name to accept agbs -->
       <input type="checkbox" name="accept_agbs" id="accept_agbs" value="1" aria-labelledby="acceptLabel" /> <!-- added aria-labelledby to reference the label next to the tag -->
       <label id="acceptLabel" for="accept_agbs">I accept the terms and conditions</label>
     </div>
-    <div class="control">
+    <div class="submit">
       <input name="validate" type="hidden" value="1" />
       <input type="submit" value="Register" />
     </div>
@@ -63,8 +63,6 @@
   <script>"use strict"; <!-- remove an unessary ;-->
       (function () {
         var validateInput;
-
-        var numberOfErrors = 0;
       
         $.urlParam = function (name) {
           var results;
